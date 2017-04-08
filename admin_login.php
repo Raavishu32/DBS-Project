@@ -25,7 +25,7 @@ if ($_GET)
 	<div class="register_page2">
         <div class="form2">
             <h2>Administrator Login</h2>
-            <form method="post" action="admin_test.php" id="register" class="register">
+            <form method="post" action="admin_test.php" id="admin_login" class="admin_login">
                	<input type="value" name="admin_id" placeholder="Admin ID"/>
                 <input type="password" name="password" placeholder="Password">
                 <button name="submit" value="Submit">Login</button>
