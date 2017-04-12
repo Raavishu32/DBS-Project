@@ -4,6 +4,7 @@ require_once("../dblogincreds.php");
 if(!isset($_POST["submit"]))
 {
 header("Location: admin_login.php");	
+die();
 }
 $connection = mysqli_connect("localhost",$dbuser,$dbpass,"hostel_allotment");
 $username = $_POST["admin_id"];
