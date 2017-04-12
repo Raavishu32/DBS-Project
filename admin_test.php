@@ -1,5 +1,6 @@
 <?php  
-require_once('../dblogincreds.php');
+
+require_once("../dblogincreds.php");
 if(!isset($_POST["submit"]))
 {
 header("Location: admin_login.php");	
