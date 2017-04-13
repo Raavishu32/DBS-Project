@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2017 at 08:48 AM
+-- Generation Time: Apr 13, 2017 at 10:11 AM
 -- Server version: 5.7.17-0ubuntu0.16.04.2
 -- PHP Version: 7.0.15-0ubuntu0.16.04.4
 
@@ -74,6 +74,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `password`, `admin_name`) VALUES
+('raavishu', 'raavishu', 'Raavishu Sanghvi'),
+('shubham', 'shubham', 'Shubham Wahal'),
 ('utkarsh', 'utkarsh', 'Utkarsh Agarwal');
 
 -- --------------------------------------------------------
@@ -104,66 +106,6 @@ INSERT INTO `hostel` (`hostel_id`, `hostel_name`, `no_of_beds`, `gpa_req`, `gend
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hostel1`
---
-
-CREATE TABLE `hostel1` (
-  `reg_no` bigint(15) NOT NULL,
-  `stud_name` varchar(20) NOT NULL,
-  `room` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hostel2`
---
-
-CREATE TABLE `hostel2` (
-  `reg_no` bigint(15) NOT NULL,
-  `stud_name` varchar(20) NOT NULL,
-  `room` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hostel3`
---
-
-CREATE TABLE `hostel3` (
-  `reg_no` bigint(15) NOT NULL,
-  `stud_name` varchar(20) NOT NULL,
-  `room` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hostel4`
---
-
-CREATE TABLE `hostel4` (
-  `reg_no` bigint(15) NOT NULL,
-  `stud_name` varchar(20) NOT NULL,
-  `room` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hostel5`
---
-
-CREATE TABLE `hostel5` (
-  `reg_no` bigint(15) NOT NULL,
-  `stud_name` varchar(20) NOT NULL,
-  `room` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `students`
 --
 
@@ -186,12 +128,13 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`reg_no`, `stud_name`, `year`, `course`, `gpa`, `hostel_id`, `room`, `email`, `phone`, `password`, `gender`) VALUES
-(45, 'gdrfed', 2003, '354ertfyg', '34.00', 2, 76, 'sedrft', 43567456, 'dcfvg', 'female'),
-(3456, 'rdtfg', 2, 'erdtf', '45.00', NULL, NULL, 'rtdfg@hj.com', 2345678, 'gfvdcs', 'female '),
-(1234567, 'raav', 2017, 'efdcx', '6.70', NULL, NULL, 'fd@fe.com', 1234567890, 'tfygh', 'female '),
-(34565768, 'rdtfg', 2, 'erdtf', '45.00', NULL, NULL, 'rtdfg@hj.com', 2345678, 'ghj', 'male'),
-(150905104, 'Raavishu', 2017, 'CSE', '5.70', NULL, NULL, 'coolguy.agarwal365@gmail.com', 987654321, 'utkarsh', 'female '),
-(150905112, 'utkarsh agarwal', 2002, 'CSE', '9.00', 2, 515, 'jwnd@f4e.com', 9648055344, 'utkarsh', 'male');
+(150901111, 'Aneesh Bose', 2, 'CSE', '7.50', NULL, NULL, 'aneeshbose@hotmail.com', 908987632, 'aneesh', 'male'),
+(150905104, 'Raavishu', 2, 'CSE', '5.70', NULL, NULL, 'rsanghvi32@gmail.com', 987654321, 'raavishu', 'male '),
+(150905112, 'utkarsh agarwal', 2, 'CSE', '9.00', 2, 515, 'jwnd@f4e.com', 9648055344, 'utkarsh', 'male'),
+(150905123, 'Shubham Wahal', 2, 'CCE', '8.00', NULL, NULL, 'shubham@yahoo.com', 987654321, 'shubham', 'male'),
+(1509052121, 'Disha Parwani', 2, 'CCE', '8.80', NULL, NULL, 'disha@gmail.com', 989898980, 'disha', 'female'),
+(1509053131, 'Aishwarya Yadav', 2, 'CCE', '8.50', NULL, NULL, 'aishu@gmail.com', 900098767, 'aishu', 'female'),
+(1509053232, 'Saksham Pandey', 2, 'CSE', '8.40', NULL, NULL, 'saksham@gmail.com', 987656789, 'saksham', 'male');
 
 -- --------------------------------------------------------
 
@@ -204,14 +147,6 @@ CREATE TABLE `student_preferences` (
   `pref_1` int(5) NOT NULL,
   `pref_2` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `student_preferences`
---
-
-INSERT INTO `student_preferences` (`reg_no`, `pref_1`, `pref_2`) VALUES
-(45, 5, 4),
-(150905112, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -227,6 +162,17 @@ CREATE TABLE `wardens` (
   `email` varchar(20) NOT NULL,
   `hostel_id` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `wardens`
+--
+
+INSERT INTO `wardens` (`warden_id`, `name`, `address`, `phone`, `email`, `hostel_id`) VALUES
+(1001, 'Rama Chandra', 'Manipal', 975313579, 'rama@gmail.com', 1),
+(1002, 'Suresh Gopi', 'Manipal', 864246801, 'suresh@gmail.com', 2),
+(1003, 'Arindham Gupta', 'Manipal', 998887770, 'agupta@gmail.com', 3),
+(1004, 'Yogesh Malik', 'Manipal', 977766600, 'ymalik@gmail.com', 4),
+(1005, 'Suresh Pai', 'Manipal', 777666555, 'paisuresh@gmail.com', 5);
 
 --
 -- Indexes for dumped tables
