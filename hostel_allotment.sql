@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2017 at 10:11 AM
+-- Generation Time: Apr 13, 2017 at 10:46 AM
 -- Server version: 5.7.17-0ubuntu0.16.04.2
 -- PHP Version: 7.0.15-0ubuntu0.16.04.4
 
@@ -130,7 +130,7 @@ CREATE TABLE `students` (
 INSERT INTO `students` (`reg_no`, `stud_name`, `year`, `course`, `gpa`, `hostel_id`, `room`, `email`, `phone`, `password`, `gender`) VALUES
 (150901111, 'Aneesh Bose', 2, 'CSE', '7.50', NULL, NULL, 'aneeshbose@hotmail.com', 908987632, 'aneesh', 'male'),
 (150905104, 'Raavishu', 2, 'CSE', '5.70', NULL, NULL, 'rsanghvi32@gmail.com', 987654321, 'raavishu', 'male '),
-(150905112, 'utkarsh agarwal', 2, 'CSE', '9.00', 2, 515, 'jwnd@f4e.com', 9648055344, 'utkarsh', 'male'),
+(150905112, 'utkarsh agarwal', 2, 'CSE', '9.00', 2, 23, 'jwnd@f4e.com', 9648055344, 'utkarsh', 'male'),
 (150905123, 'Shubham Wahal', 2, 'CCE', '8.00', NULL, NULL, 'shubham@yahoo.com', 987654321, 'shubham', 'male'),
 (1509052121, 'Disha Parwani', 2, 'CCE', '8.80', NULL, NULL, 'disha@gmail.com', 989898980, 'disha', 'female'),
 (1509053131, 'Aishwarya Yadav', 2, 'CCE', '8.50', NULL, NULL, 'aishu@gmail.com', 900098767, 'aishu', 'female'),
@@ -147,6 +147,16 @@ CREATE TABLE `student_preferences` (
   `pref_1` int(5) NOT NULL,
   `pref_2` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_preferences`
+--
+
+INSERT INTO `student_preferences` (`reg_no`, `pref_1`, `pref_2`) VALUES
+(150901111, 1, 3),
+(150905104, 1, 2),
+(150905123, 2, 3),
+(1509052121, 4, 5);
 
 -- --------------------------------------------------------
 

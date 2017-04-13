@@ -58,6 +58,11 @@ switch($choice)
         header("Location: newstudent.html");
         die();
     break;
+    case 7:
+        header("Location: allotment.php");
+        die();
+    break;
+
 }
 if(in_array($choice,array(1,2,3,4,5)))
 {
