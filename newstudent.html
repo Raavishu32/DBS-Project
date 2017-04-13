@@ -14,16 +14,21 @@
 	<div class="register_page2">
         <div class="form">
             <h2>New Student</h2>
-            <form method="post" action="#" id="register" class="register">
-               	<input type="text" name="name" placeholder="Full Name">
-                <input type="value" name="reg_no" placeholder="Registration Number">
-				<input type="password" name="password" placeholder="Password">
-				<input type="value" name="year" placeholder="Year">
-				<input type="text" name="course" placeholder="Course">
-				<input type="value" name="gpa" placeholder="CGPA">
-				<input type="email" name="email" placeholder="Email">
-				<input type="value" name="ph_number" placeholder="Phone Number">
-			<button>Add</button>
+            <form method="post" action="newstudent.php" id="register" class="register" >
+               	<input type="text" name="name" placeholder="Full Name" required>
+                <input type="number" name="reg_no" placeholder="Registration Number" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<input type="value" name="year" placeholder="Year" required>
+				<input type="text" name="course" placeholder="Course" required>
+				<input type="number" step = "0.01" name="gpa" placeholder="CGPA" required>
+				<input type="email" name="email" placeholder="Email" required>
+				<input type="value" name="ph_number" placeholder="Phone Number" required>
+				<select name = "gender" required="">
+							<option disabled selected>Gender</option>
+							<option class="others" value = "male">Male</option>
+							<option class="others" value = "female ">Female</option>
+				</select>
+			<button name = "submit" value ="Submit">Add</button>
             </form>
         </div>
     </div>
