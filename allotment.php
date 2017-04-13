@@ -11,7 +11,7 @@ $connection = mysqli_connect("localhost",$dbuser,$dbpass,"hostel_allotment");
 $query = "Select students.reg_no,gpa,pref_1,pref_2 from students natural join student_preferences where hostel_id IS NULL ORDER BY gpa";
 
 $result = mysqli_query($connection,$query);
-
+$output = "";
 while($row = mysqli_fetch_row($result))
 {
 	$query1 = "Select gpa_req from hostel where hostel_id = '{$row[2]}'";
@@ -40,7 +40,7 @@ while($row = mysqli_fetch_row($result))
  	}
 
  	
- 	$output = "";
+ 	
  	if ($allot)
  	{
  		$output .= $stud_reg." was successfully allotted<br><br>";
