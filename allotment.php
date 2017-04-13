@@ -40,15 +40,40 @@ while($row = mysqli_fetch_row($result))
  	}
 
  	
-
+ 	$output = "";
  	if ($allot)
  	{
- 		echo $stud_reg." was successfully allotted<br><br>";
+ 		$output .= $stud_reg." was successfully allotted<br><br>";
  	}
  	else
  	{
- 		echo $stud_reg." didnt have the required GPA for their preferences";
+ 		$output .= $stud_reg." didnt have the required GPA for their preferences<br><br>";
  	}
 }
 
+
+
 ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Students Alloted!</title>
+	<link rel="stylesheet" type="text/css" href="css/login_style.css">
+</head>
+<body>
+	<style>
+		body
+		{
+			background-image: url("Photo2.jpg");
+		}
+	</style>
+	<div class="register_page2">
+		<div class= "form2">
+            <?=$output ?>
+            <button onclick = "location.href='admin_select.html';">Menu</button>
+    	</div>
+    </div>
+</body>
+</html>
